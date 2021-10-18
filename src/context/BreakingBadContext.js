@@ -28,8 +28,8 @@ export const BreakingBadContextProvider = ({ children }) => {
 		dispatch({ type: "CURRENT_PAGE", payload: number })
 
 	useEffect(() => {
+		dispatch({ type: "FETCH_INIT" })
 		const fetchData = async () => {
-			dispatch({ type: "FETCH_INIT" })
 			try {
 				const result = await axios.get(
 					`https://www.breakingbadapi.com/api/characters?name=${query}`
