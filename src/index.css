@@ -1,13 +1,32 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+.transition-in {
+	@apply bg-breakingGreen absolute bottom-0 w-full transform transition-all
+		duration-500 ease-in-out translate-y-0 h-52 text-white text-sm opacity-90;
+}
+
+.transition-out {
+	@apply bg-breakingGreen absolute bottom-0 w-full transform transition-all duration-500 ease-in-out translate-y-full h-52 text-white text-sm invisible opacity-0;
+}
+
+html,
+body {
+	background: #000 url("./images/bg.jpg") no-repeat center center/cover;
 }
