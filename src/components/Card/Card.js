@@ -4,10 +4,10 @@ import Filter from "../Filter/Filter"
 import CardItems from "./CardItems"
 
 const Card = () => {
-	const { currentPosts } = useBreakingBad()
+	const { currentPosts, loading, error } = useBreakingBad()
 	return (
 		<>
-			<div className="">
+			<div>
 				<Filter />
 			</div>
 			<div className="flex justify-center items-center py-5">
