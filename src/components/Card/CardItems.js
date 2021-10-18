@@ -14,7 +14,7 @@ const CardItems = ({
 	return (
 		<div className="relative overflow-hidden">
 			<div>
-				<img src={img} alt={name} className="w-60 h-72" />
+				<img src={img} alt={name} style={{ width: "240px", height: "288px" }} />
 				<button
 					aria-label="toggle infos card"
 					type="button"
